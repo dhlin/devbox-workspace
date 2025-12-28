@@ -1,0 +1,6 @@
+# Ignore the cloned test repository
+test-repo/
+
+# Ignore devbox generated files
+.devbox/
+devbox.lock

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/main/.schema/devbox.schema.json",
+  "packages": [],
+  "include": [
+    "path:../"
+  ],
+  "env": {
+    "GIT_REPO_URLS": "https://github.com/jetify-com/devbox.git https://github.com/jetify-com/devbox-plugins.git/main"
+  },
+  "shell": {
+    "init_hook": []
+  }
+}

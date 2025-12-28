@@ -1,0 +1,19 @@
+{
+  "name": "git-clone",
+  "version": "0.0.1",
+  "description": "Plugin to automatically clone git repositories into your devbox project. Use 'devbox run git-clone:run <repo_name> <git_args>' to run git commands.",
+  "packages": ["git"],
+  "env": {
+    "GIT_REPO_URLS": "",
+    "GIT_CLONE_DIR": "{{ .Virtenv }}"
+  },
+  "shell": {
+    "init_hook": "bash {{ .Virtenv }}/init_hook.sh",
+    "scripts": {
+      "git": "git -C $GIT_CLONE_DIR/\"$@\""
+    }
+  },
+  "create_files": {
+    "{{.Virtenv}}/init_hook.sh": "init_hook.sh"
+  }
+}
