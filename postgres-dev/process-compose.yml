@@ -1,0 +1,13 @@
+version: "0.5"
+
+processes:
+  postgres:
+    command: "$PG_PREFIX/bin/pg_ctl start -D $PGDATA"
+    is_daemon: true
+    shutdown:
+      command: "$PG_PREFIX/bin/pg_ctl stop -m fast"
+    availability:
+      restart: "always"
+    readiness_probe:
+      exec:
+        command: "$PG_PREFIX/bin/pg_isready"

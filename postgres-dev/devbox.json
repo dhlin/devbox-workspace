@@ -1,0 +1,39 @@
+{
+    "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.14.2/.schema/devbox.schema.json",
+    "packages": [
+      "meson@latest",
+      "ninja@latest",
+      "flex@latest",
+      "bison@latest",
+      "pkg-config@latest",
+      "readline@latest",
+      "readline.dev",
+      "xml2@latest"
+    ],
+    "env": {
+      "GIT_REPO_URLS": "https://github.com/postgres/postgres",
+      "GIT_CLONE_DIR": "$DEVBOX_PROJECT_ROOT"
+    },
+    "shell": {
+      "init_hook": [
+        "source $DEVBOX_PROJECT_ROOT/env.sh"
+      ],
+      "scripts": {
+        "setup": [
+          "meson setup $PG_BUILDDIR $GIT_CLONE_DIR/postgres --prefix=$PG_PREFIX -Dpgport=$PGPORT --debug --buildtype=${PG_BUILDTYPE:-debug}"
+        ],
+        "build": [
+          "ninja -C $PG_BUILDDIR install \"$@\""
+        ],
+        "initdb": [
+          "$PG_PREFIX/bin/initdb -D $PGDATA"
+        ],
+        "psql": [
+          "$PG_PREFIX/bin/psql -d postgres -p $PGPORT"
+        ]
+      }
+    },
+    "include": [
+      "path:../git-clone"
+    ]
+}
