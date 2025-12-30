@@ -1,0 +1,30 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.14.2/.schema/devbox.schema.json",
+  "packages": {
+    "postgresql_18": {
+      "version" : "latest",
+      "disable_plugins" : true
+    },
+    "postgresql18Packages.pgvector": {
+      "version": "latest"
+    },
+    "path:../vectorchord":{}
+  },
+  "env": {
+    "PGPORT": "5000",
+    "PGDATA": "$DEVBOX_PROJECT_ROOT/data",
+    "PGHOST": "$DEVBOX_PROJECT_ROOT",
+    "PGDATABASE": "postgres"
+  },
+  "shell": {
+    "init_hook": [
+      "echo 'Welcome to devbox!' > /dev/null"
+    ],
+    "scripts": {
+      "initdb": [
+        "initdb",
+        "echo \"include = '$DEVBOX_PROJECT_ROOT/pg18.conf'\" >> $PGDATA/postgresql.conf"
+      ]
+    }
+  }
+}
