@@ -10,7 +10,8 @@
       "version": "8.3p3",
       "outputs": ["dev"]
     },
-    "openssl": "3.6.0"
+    "openssl": "3.6.0",
+    "path:../hackorum-patch#default": ""
   },
   "env": {
     "GIT_REPO_URLS": "https://github.com/postgres/postgres",
@@ -42,7 +43,7 @@
         "$PG_PREFIX/bin/psql -d postgres -p $PGPORT"
       ],
       "patch": [
-        "cd $GIT_CLONE_DIR/postgres && ../hackorum-patch \"$@\""
+        "cd $GIT_CLONE_DIR/postgres && hackorum-patch --worktree=yes \"$@\""
       ]
     }
   },
