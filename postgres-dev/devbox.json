@@ -16,8 +16,8 @@
   "env": {
     "GIT_REPO_URLS": "https://github.com/postgres/postgres",
     "GIT_CLONE_DIR": "$DEVBOX_PROJECT_ROOT",
-    "CC": "gcc",
-    "CXX": "g++"
+    "CC":            "gcc",
+    "CXX":           "g++"
   },
   "shell": {
     "init_hook": [
