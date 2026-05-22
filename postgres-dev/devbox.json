@@ -42,6 +42,12 @@
       "psql": [
         "$PG_PREFIX/bin/psql -d postgres -p $PGPORT"
       ],
+      "start": [
+        "$PG_PREFIX/bin/pg_ctl start -D $PGDATA -l $PGDATA/postgres.log"
+      ],
+      "stop": [
+        "$PG_PREFIX/bin/pg_ctl stop -m fast"
+      ],
       "patch": [
         "cd $GIT_CLONE_DIR/postgres && hackorum-patch --worktree=yes \"$@\""
       ]
