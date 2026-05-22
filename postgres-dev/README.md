@@ -4,14 +4,17 @@ A Devbox environment for building and running PostgreSQL from source.
 
 ## Features
 
-- Branch-specific build directories and data directories
-- Dynamic port assignment based on branch name
+- Uses PostgreSQL's [Meson](https://mesonbuild.com/) build system for faster, modern builds
+- Branch-specific build and isolated PostgreSQL services
+- Integrated [hackorum-patch](https://hackorum.dev/) for applying patches from the PostgreSQL mailing list directly
 
 ## Prerequisites
 
 - [Devbox](https://www.jetify.com/devbox) installed
 
 ## Quick Start
+
+> **Important:** All `devbox` commands must be run from the root of a PostgreSQL source checkout
 
 ```bash
 # Enter the development shell
@@ -27,7 +30,7 @@ devbox run build
 devbox run initdb
 
 # Start PostgreSQL in the background
-devbox services up -b
+devbox run start
 
 # Connect to the database
 devbox run psql
