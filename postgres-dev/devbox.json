@@ -25,7 +25,7 @@
     ],
     "scripts": {
       "setup": [
-        "meson setup $PG_BUILDDIR $GIT_CLONE_DIR/postgres --prefix=$PG_PREFIX -Dpgport=$PGPORT --debug --buildtype=${PG_BUILDTYPE:-debug}"
+        "meson setup $PG_BUILDDIR $DEVBOX_WD --prefix=$PG_PREFIX -Dpgport=$PGPORT --debug --buildtype=${PG_BUILDTYPE:-debug} \"$@\""
       ],
       "build": [
         "ninja -C $PG_BUILDDIR install \"$@\""

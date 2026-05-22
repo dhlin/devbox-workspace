@@ -1,4 +1,10 @@
-pg_branchname=$(git -C $GIT_CLONE_DIR/postgres rev-parse --abbrev-ref HEAD)
+if [ ! -d "$DEVBOX_WD/src" ]; then
+  echo "error: '$DEVBOX_WD' does not look like a PostgreSQL source tree (no 'src/' directory)." >&2
+  echo "       Please launch this devbox shell from the root of a PostgreSQL checkout." >&2
+  exit 1
+fi
+
+pg_branchname=$(git -C $DEVBOX_WD rev-parse --abbrev-ref HEAD)
 pg_branch=$(echo $pg_branchname | sed -r 's/\//-/g')
 pg_build=$DEVBOX_PROJECT_ROOT/build/$pg_branch
 
