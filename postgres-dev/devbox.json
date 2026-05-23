@@ -11,7 +11,11 @@
       "outputs": ["dev"]
     },
     "openssl": "3.6.0",
-    "path:../hackorum-patch#default": ""
+    "path:../hackorum-patch#default": "",
+    "perl":                           "5.42.0",
+    // perl packages must be built against the same perl version as the `perl` package above
+    "perl5Packages.IPCRun":           "20231003.0",
+    "pkgconfig":                      "latest"
   },
   "env": {
     "GIT_REPO_URLS": "https://github.com/postgres/postgres",
@@ -25,7 +29,7 @@
     ],
     "scripts": {
       "setup": [
-        "meson setup $PG_BUILDDIR $DEVBOX_WD --prefix=$PG_PREFIX -Dpgport=$PGPORT --debug --buildtype=${PG_BUILDTYPE:-debug} \"$@\""
+        "meson setup $PG_BUILDDIR $DEVBOX_WD --prefix=$PG_PREFIX -Dpgport=$PGPORT --debug -Dinjection_points=true --buildtype=${PG_BUILDTYPE:-debug} \"$@\""
       ],
       "build": [
         "ninja -C $PG_BUILDDIR install \"$@\""
@@ -50,6 +54,9 @@
       ],
       "patch": [
         "cd $GIT_CLONE_DIR/postgres && hackorum-patch --worktree=yes \"$@\""
+      ],
+      "test": [
+        "meson test -C $PG_BUILDDIR -q --print-errorlogs \"$@\""
       ]
     }
   },

@@ -425,6 +425,160 @@
         }
       }
     },
+    "perl5Packages.IPCRun@20231003.0": {
+      "last_modified": "2026-04-23T13:07:47Z",
+      "resolved": "github:NixOS/nixpkgs/01fbdeef22b76df85ea168fbfe1bfd9e63681b30#perl5Packages.IPCRun",
+      "source": "devbox-search",
+      "version": "20231003.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/4qh7cfhq3casa8z3304yfvfj1zr1jlzc-perl5.42.0-IPC-Run-20231003.0",
+              "default": true
+            },
+            {
+              "name": "devdoc",
+              "path": "/nix/store/5k9d3iwgjqz0y3k3svdbihxnfqbkgniw-perl5.42.0-IPC-Run-20231003.0-devdoc"
+            }
+          ],
+          "store_path": "/nix/store/4qh7cfhq3casa8z3304yfvfj1zr1jlzc-perl5.42.0-IPC-Run-20231003.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/349gbl1q1p1c2z2jm37csx52p5s6j2f5-perl5.42.0-IPC-Run-20231003.0",
+              "default": true
+            },
+            {
+              "name": "devdoc",
+              "path": "/nix/store/2wm57q73i9masdhs3q3qj66wsxki1ckr-perl5.42.0-IPC-Run-20231003.0-devdoc"
+            }
+          ],
+          "store_path": "/nix/store/349gbl1q1p1c2z2jm37csx52p5s6j2f5-perl5.42.0-IPC-Run-20231003.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/vmzwzhpxcrh6q0h6lmc0x459z9q80n7p-perl5.42.0-IPC-Run-20231003.0",
+              "default": true
+            },
+            {
+              "name": "devdoc",
+              "path": "/nix/store/qs4qg4rhkiv30q0w3xplfh1hv4w1ic6n-perl5.42.0-IPC-Run-20231003.0-devdoc"
+            }
+          ],
+          "store_path": "/nix/store/vmzwzhpxcrh6q0h6lmc0x459z9q80n7p-perl5.42.0-IPC-Run-20231003.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/whr49vc1p0340hyv5jq2dgbclf3pg9fb-perl5.42.0-IPC-Run-20231003.0",
+              "default": true
+            },
+            {
+              "name": "devdoc",
+              "path": "/nix/store/i3c7x44mmqaq1ilsgim45xf6zp7q33q5-perl5.42.0-IPC-Run-20231003.0-devdoc"
+            }
+          ],
+          "store_path": "/nix/store/whr49vc1p0340hyv5jq2dgbclf3pg9fb-perl5.42.0-IPC-Run-20231003.0"
+        }
+      }
+    },
+    "perl@5.42.0": {
+      "last_modified": "2026-04-23T13:07:47Z",
+      "resolved": "github:NixOS/nixpkgs/01fbdeef22b76df85ea168fbfe1bfd9e63681b30#perl",
+      "source": "devbox-search",
+      "version": "5.42.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/a04sbmij2ba455slf378x7n2h3p8zn7d-perl-5.42.0",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/0rpdd9iviwbc6dwjszvx41d7iy1zc068-perl-5.42.0-man",
+              "default": true
+            },
+            {
+              "name": "devdoc",
+              "path": "/nix/store/vgmw7c59xbxqlhaxz00d2swh5dvdfgkc-perl-5.42.0-devdoc"
+            }
+          ],
+          "store_path": "/nix/store/a04sbmij2ba455slf378x7n2h3p8zn7d-perl-5.42.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/zs9mx7jdd39p88nq1zznyxpkmxyyybiz-perl-5.42.0",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/8h5xqsa4z28wnqkhi106ya79a7hdjarb-perl-5.42.0-man",
+              "default": true
+            },
+            {
+              "name": "devdoc",
+              "path": "/nix/store/d3fxlnv12rhikrqbr4x7w5yi399jwxil-perl-5.42.0-devdoc"
+            }
+          ],
+          "store_path": "/nix/store/zs9mx7jdd39p88nq1zznyxpkmxyyybiz-perl-5.42.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/q80l1crfmqv83vpgd6w1bjdkpksfbc5y-perl-5.42.0",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/j4xd4z0k6fp2lgqmaks902hkhy7603fn-perl-5.42.0-man",
+              "default": true
+            },
+            {
+              "name": "devdoc",
+              "path": "/nix/store/lwhrb98jv1vxfnji149pnx64i21ir4xk-perl-5.42.0-devdoc"
+            }
+          ],
+          "store_path": "/nix/store/q80l1crfmqv83vpgd6w1bjdkpksfbc5y-perl-5.42.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/xc6nj52vhg4ndmyxw7c5q6iqm8jzrwdm-perl-5.42.0",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/i89z4bx0m7frbm1wsxcwx5bfx9d8x3jb-perl-5.42.0-man",
+              "default": true
+            },
+            {
+              "name": "devdoc",
+              "path": "/nix/store/4bls3zzz8zxsw0rx1vmjbicnq1c0zsb4-perl-5.42.0-devdoc"
+            }
+          ],
+          "store_path": "/nix/store/xc6nj52vhg4ndmyxw7c5q6iqm8jzrwdm-perl-5.42.0"
+        }
+      }
+    },
+    "pkgconfig@latest": {
+      "last_modified": "2023-02-24T09:01:09Z",
+      "resolved": "github:NixOS/nixpkgs/7d0ed7f2e5aea07ab22ccb338d27fbe347ed2f11#pkgconfig",
+      "source": "devbox-search",
+      "version": "0.29.2"
+    },
     "readline@8.3p3": {
       "last_modified": "2026-01-23T17:20:52Z",
       "resolved": "github:NixOS/nixpkgs/a1bab9e494f5f4939442a57a58d0449a109593fe#readline",
