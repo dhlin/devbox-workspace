@@ -10,7 +10,10 @@
       "version": "8.3p3",
       "outputs": ["dev"]
     },
-    "openssl":                        "3.6.0",
+    "openssl": {
+      "version": "3.6.0",
+      "outputs": ["dev"]
+    },
     "path:../hackorum-patch#default": "",
     "perl":                           "5.42.0",
     // perl packages must be built against the same perl version as the `perl` package above
